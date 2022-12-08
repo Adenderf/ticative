@@ -1,17 +1,19 @@
 const mongoose = require('mongoose');
+const populate = require('mongoose-autopopulate');
 
 const CartSchema = new mongoose.Schema({
-    quantity : Number,
-    totalCost : Number,
+    status: String,
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
-    orders : [
+    products : [
         { 
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Order'
+            ref: 'Artproduct',
+            autopopulate: true
         }
     ]
 });
+CartSchema.plugin(populate);
 module.exports = mongoose.model('Cart', CartSchema);

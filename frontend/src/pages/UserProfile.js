@@ -1,27 +1,51 @@
-import React from 'react'
-import Header from '../components/Header'
-import Logo from '../assets/Logo.png'
-import Product from '../components/Product'
-const UserProfile = () => {
+import React from "react";
+import Profile from "../assets/jp.jpg";
+import "./UserProfile.css";
+import Product from "../components/Product";
+import Header from "../components/Header";
+const UserArtist = () => {
   return (
-    <div className='user__rofile'>
-        <Header/>
-    
-    <div className='login__logo'>
-                <img src={Logo} alt="ticativ logo"/>
-    </div>
-    <div className='user__description'>
-        <p className='user__paragraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce erat mi, accumsan bibendum feugiat sed, varius ac orci. Pellentesque scelerisque quis ex eget egestas. Etiam aliquet pellentesque mi ut feugiat. Nulla aliquam arcu leo, sed laoreet nulla fermentum sed. Nunc porta sit amet lorem sed luctus. Fusce tristique ligula id tincidunt condimentum. Fusce ac mauris ultricies, elementum sem in, interdum tortor. Pellentesque ut dui nisl. Suspendisse eget commodo dui. Fusce in egestas orci. Nam suscipit velit enim, a semper magna ornare non.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce erat mi, accumsan bibendum feugiat sed, varius ac orci. Pellentesque scelerisque quis ex eget egestas. Etiam aliquet pellentesque mi ut feugiat. Nulla aliquam arcu leo, sed laoreet nulla fermentum sed. Nunc porta sit amet lorem sed luctus. Fusce tristique ligula id tincidunt condimentum. Fusce ac mauris ultricies, elementum sem in, interdum tortor. Pellentesque ut dui nisl. Suspendisse eget commodo dui. Fusce in egestas orci. Nam suscipit velit enim, a semper magna ornare non.</p>
+    <>
+      <Header />
+      <div className="container">
+        <div className="header-container">
+          <div className="header-profile"></div>
+          <h1 class="main-heading">Jaypee</h1>
+          <div className="overlay-header"></div>
+          <div className="overlay-header2"></div>
+          <div className="body">
+            {/* Profile Picture */}
+            <img src={Profile} alt="Logo" className="body-image" />
 
-    </div>
-    <div className="home__row">
-          <Product />
-          <Product />
-          
+            <div className="u-clearfix"></div>
+            <div className="body-info">
+              <p>
+                Each person has his or her own experiences as an artist. My
+                interest in art started at a really young age and I have no one
+                better to thank than my very passionate teachers in elementary
+                school. From as early as first grade, I can remember doing
+                several different art projects that helped to shape my skills
+                and creativity. In third grade, I got the pleasure of painting
+                with a local artist who came to teach us the art of water
+                coloring. In fifth grade I learned how to draw things in
+                perspective.
+              </p>
+            </div>
+
+            <div className="card u-clearfix">
+              <span className="card-heading">Artworks</span>
+              <span className="card-more"></span>
+              <ul className="card-list">
+                <li>
+                  <Product />
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </div>
-  )
-}
+      </div>
+    </>
+  );
+};
 
-export default UserProfile
+export default UserArtist;

@@ -1,13 +1,8 @@
-.login__logo {
-    width: 150px;
-    height: 150px;
+.container > .header-profile {
+  position: relative;
+  top: 10px;
 }
-.user__description {
-    text-align: center;
-    text-justify: auto;
-}
-.user__description > .user__paragraph {
-    width: 30px;
-    padding: 15px;
-
+.body-image {
+  width: 110px;
+  height: 110px;
 }

@@ -4,8 +4,12 @@ const ArtproductSchema = new mongoose.Schema({
     productName : String,
     productDesc : String,
     price : Number,
-    productPhoto : Buffer,
+    category : String,
     status: String,
+    productPhoto : {
+        path: String,
+        filename: String
+    },
     artist : {
         type:mongoose.Schema.Types.ObjectId,
         ref: 'User'

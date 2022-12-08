@@ -17,9 +17,14 @@ server.use( helmet() );
 const AuthRoute = require('./routes/authRoute');
 const UserRoute = require('./routes/users');
 const ArtProductRoute = require('./routes/artProduct');
+const CartRoute = require('./routes/cart');
 
 // Database connection
 mongoose.connect('mongodb+srv://tricative:WW2HjUgFqXieitJU@cluster0.zjj0pac.mongodb.net/ticativ')
+
+
+
+
 
 
 
@@ -32,6 +37,7 @@ server.get('/', (request, response) => {
 server.use('/api/v1/auth', AuthRoute);
 server.use('/api/v1/user', UserRoute);
 server.use('/api/v1/artProduct', ArtProductRoute);
+server.use('/api/v1/cart', CartRoute);
 
 server.listen(
     port,

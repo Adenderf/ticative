@@ -76,7 +76,12 @@ router.post('/loginWithEmail', (request, response ) => {
                     if (match) {
                         response.send({
                             status: "valid credentials",
-                            user: result
+                            user: {
+                                id: result._id,
+                                fullname: result.fullname,
+                                description: result.description,
+                                userType: result.userType
+                            }
                         })
                     }else{
                         response.send({
@@ -107,7 +112,12 @@ router.post('/loginWithNumber', (request, response ) => {
                     if (match) {
                         response.send({
                             status: "valid credentials",
-                            user: result
+                            user: {
+                                id: result._id,
+                                fullname: result.fullname,
+                                description: result.description,
+                                userType: result.userType
+                            }
                         })
                     }else{
                         response.send({
