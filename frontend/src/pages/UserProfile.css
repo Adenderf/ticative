@@ -1,0 +1,13 @@
+.login__logo {
+    width: 150px;
+    height: 150px;
+}
+.user__description {
+    text-align: center;
+    text-justify: auto;
+}
+.user__description > .user__paragraph {
+    width: 30px;
+    padding: 15px;
+
+}
